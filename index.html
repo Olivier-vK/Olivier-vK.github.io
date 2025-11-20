@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML en CSS</title>
+        <link rel="stylesheet" href="homemadesite.css">
+    </head>
+
+    <body>
+        <div class="container">
+            
+            <header><h1>HTML en CSS</h1></header>
+
+                <div class="nav">
+                    <ol>
+                        <li><b><a href="#html" class="paginalink">HTML</a></b>
+                            <ul>
+                                <li><a href="#basis" class="paginalink">Basis</a> </li>
+                                <li><a href="#tekensenopmaak" class="paginalink">Tekstopmaak en tekens</a> </li>
+                                <li><a href="#hyperlinks" class="paginalink">Hyperlinks</a> </li>
+                                <li><a href="#plaatjes" class="paginalink">Afbeeldingen</a> </li>
+                                <li><a href="#lijsten" class="paginalink">Lijsten</a> </li>
+                                <li><a href="#tabellen" class="paginalink">Tabellen</a> </li>
+                            </ul>
+                        </li>
+
+                        <li>CSS</li>
+
+                        <li><b><a href="#blokken" class="paginalink">Blokken</a></b>
+                            <ul>
+                                <li><a href="#simpeleblokkenstructuur" class="paginalink">Simpele blokkenstructuur</a></li>
+                                <li><a href="#blokkenpositie" class="paginalink">Positie van blokken</a> </li>
+                            </ul>
+                        </li>
+
+                        <li>Extra</li>
+                    </ol>
+                </div>
+
+                <div class="article" id="articlehtml">
+                    
+                    <h2 id="html">HTML</h3>
+                    <h3 id="basis">Basis</h4>
+                    <p>Een simpele HTML-code schrijven is niet heel moeilijk. HTML-code bestaat uit tags. De meeste uit een openings- en een eind-tag. Maar sommigen zonder eind-tag. Een tag ziet er zo uit: <span class="overzicht">&lt;tag&gt;...&lt;/tag&gt;</span>. Zoals je ziet is een eind-tag met een schuine streep. 
+                    <br><br>De eerste tag in een HTML-code wordt niet afgesloten. <br>Deze tag is: <span class="overzicht">&lt;!DOCTYPE&gt;</span>. Deze geeft aan dat dit bestand een HTML-code is. <br>Dan volgen de <span class="overzicht">&lt;hmtl&gt;</span>-tags. Hiertussen komt de verdere code. In de begin-tag kan je nog meer dingen toevoegen. Je kan onder andere de taal toevoegen waarin het script geschreven is. Die tag schrijf je zo: <span class="overzicht">&lt;hmtl lang="nl"&gt;</span>. Waarbij de ingestelde taal nu nl = Nederlands is.
+                    <br><br><p><b>Head-element</b><br>Nu komt het <span class="overzicht">&lt;head&gt;</span>-element. Deze heeft geen eindtag en bevat informatie over de webpagina die je niet kan zien. Bijvoorbeeld andere gelinkte codes zoals CSS of JavaScript, of info voor de zoekmachines, maar ook de tekst van het tablad. Dat laatste moet moet tussen twee <span class="overzicht">&lt;tilte&gt;</span>-tags. Onder dit element staat nog een element die zorgt dat speciale tekens zoals ä, ó, ù op de juiste manier worden getoont. Deze is <span class="overzicht">&lt;meta charset="UTF-8"&gt;</span>. "UTF-8" is de einge waarde die deze tag mag hebben.
+                    </p><br><img src="Mooie uitlegsite foto's/Basishead.png" alt="afbeelding" width="500px">
+                    
+                    <br><br><p><b>Meta-tags</b><br>Meta-tags kunnen 2 dingen doen. Iets doen met de inhoud. Dan gebruik je net als in het voorbeeld <span class="tagintekst">charset</span>. Je kan ook iets met de naam. In plaats van <span class="tagintekst">charset</span> schrijf je <span class="tagintekst">name</span>. Na de meta-tag komt er een <span class="tagintekst">content="..."</span>-stukje met de tekst die daarin moet. De meest gebruikte meta-tags zijn:</p>
+                    <table border="1px solid black">
+                        <thead><tr><td><b>Naam</b></td><td><b>Betekenis</b></td></tr></thead>
+                        <tr><td>"author"</td><td>Voor de naam van de auteur</td></tr>
+                        <tr><td>"keywords"</td><td>Voor steekwoorden voor de zoekmachine</td></tr>
+                        <tr><td>"description"</td><td>Voor een beschrijving van de pagina voor de zoekmachines</td></tr>
+                    </table>
+                    Zo'n regel ziet er nu dus bijvoorbeeld zo uit: <br><span class="overzicht">&lt;meta name="keywords" content="pizza, recept, hawaï"&gt;</span>
+                    
+                    <br><br><br><p><b>Body-element</b><br>Dan komt het <span class="overzicht">&lt;body&gt;</span>-element. Deze bevat alle informatie die wel op de pagina wordt getoont. Die informatie kan je overzichtelijk weergeven door een titel-stuk en een tekst-stuk aan te maken in de HTML-code. Voor kopjes heb je <span class="overzicht">&lt;h&gt;</span>. Daar kan je een nummer in toevoegen wat aangeeft hoe groot het kopje is. <span class="tagintekst">&lt;h1&gt;</span> is belangrijker en dus groter dan bijvoorbeeld <span class="tagintekst">&lt;h2&gt;</span>. Voor tekststukken of paragrafen heb je geen cijfers nodig. Daar is <span class="overzicht">&lt;p&gt;</span> al genoeg. Hieronder een overzichtje van de HTML-code die je nu hebt voor een pizza-pagina:</p>
+                    <br><img src="Mooie uitlegsite foto's/basis.png" alt="voorbeeldcode" width="600px"><br>
+
+
+                    <br><br><h3 id="tekensenopmaak">Tekstopmaak en tekens</h3><p><b>Tekstopmaak</b><br>
+                    Teksten zijn deels al op te maken zonder CSS-file. Neem bijvoorbeeld koppen, subkoppen, paragrafen, schuingedrukt, dikgedrukt etc. Koppen en subkoppen heb je al gehad. Maar de rest nog niet. We beginnen met het break-element: <span class="overzicht">&lt;br&gt;</span> Deze heeft alleen maar een begintag en geeft eigenlijk gewoon een 'enter' aan. Dat is handig, want enters en meerdere spaties worden in HTML gewoon genegeerd. De rest van de HTML-elementen voor opmaak staan hieronder in een tabel.
+                    </p><table border="1px solid black">
+                        <thead><tr> <td><b>Begintag</b></td> <td><b>Eindtag</b></td> <td><b>Betekenis</b></td> </tr></thead>
+                        <tr> <td><span class="tagintekst">&lt;b&gt;</span> </td> <td><span class="tagintekst">&lt;/b&gt;</span></td> <td><b>Dikgedrukt.</b> Koppen en subkoppen zijn automatisch dikgedrukt.</td></tr>
+                        <tr> <td><span class="tagintekst">&lt;i&gt;</span></td> <td><span class="tagintekst">&lt;/i&gt;</span></td> <td><i>cursief</i></td></tr>
+                        <tr> <td><span class="tagintekst">&lt;u&gt;</span></td> <td><span class="tagintekst">&lt;/u&gt;</span></td> <td><u>onderstreept</u></td></tr>
+                    </table>
+                    
+                    <br><p><b>Tekens</b><br>Tekens die je gebruikt voor HTML-code zoals het groter- of kleiner-dan-teken kan je niet als tekst typen. Hieronder zie je een tabel met tekens. Deze start je niet met &lt; maar met &.
+                    <table border="1px solid black">
+                        <thead><tr><td><b>Code</b></td> <td><b>Teken</b></td> <td><b>Naam</b></td></tr></thead>
+                        <tr><td>&amp;nbsp;</td> <td>&nbsp;</td> <td>Spatie</td></tr>
+                        <tr><td>&amp;lt;</td> <td>&lt;</td> <td>Kleiner-dan-teken</td></tr>
+                        <tr><td>&amp;gt;</td> <td>&gt;</td> <td>Groter-dan-teken</td></tr>
+                        <tr><td>&amp;amp;</td> <td>&amp;</td> <td>Amperstand</td></tr>
+                        <tr><td>&amp;quot;</td> <td>&quot;</td> <td>Dubbele aanhalingstekens &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+                        <tr><td>&amp;euro;</td> <td>&euro;</td> <td>Euroteken</td></tr>
+                        <tr><td>&amp;copy;</td> <td>&copy;</td> <td>Copyright</td></tr>
+                        <tr><td>&amp;deg;</td> <td>&deg;</td> <td>Graden-logo</td></tr>
+                    </table>
+                    
+                    <br><br><h3 id="hyperlinks">Hyperlinks</h3><p>Een hyperlink is een link naar een andere website. Deze open je met de <br><span class="overzicht">&lt;a&gt;</span>-tag. Deze tag gebruik je ook voor een hyperlink naar een andere plek op de pagina, maar dat komt nog. Er is eerder uitgelegd dat je in de begintag extra informatie kan toevoegen. In dit geval ziet dat er zo uit: <br><span class="overzicht">&lt;a href="https://www.wikipedia.nl"&gt;Wikipedia&lt;/a&gt;</span>. Zoals je ziet komt in de begintag de link naar de andere webpagina erbij. En tussen de 2 <span class="tagintekst">&lt;a&gt;-tags</span> de weergave tekst van de link. Door in de eerste tag nog <span class="tagintekst">target="_blank"</span> toe te voegen wordt de hyperlink in een nieuw tablad geopent. <br>Je kan in plaats van een webpagina link ook een e-mail adres of een telefoonnummer toevoegen.</p>
+                    
+                    <br><h3 id="plaatjes">Afbeeldingen</h3><p>Een tag voor een plaatje heeft geen eindtag. Dit is de tag: <br><span class="overzicht">&lt;img src="..." alt="..." width="..."&gt;</span><br>Bij de <span class="tagintekst">scr</span> (source) komt de bestandslocatie van de afbeelding. <br>Bij <span class="tagintekst">alt</span> (alternative) komt de alternatieve tekst, voor als de afbeelding niet kan laden. Deze kan je leeg laten. <br>Bij <span class="tagintekst">width</span>, de breedte of <span class="tagintekst">height</span>, de hoogte van de afbeelding in px (pixels). De gehele tag kan er bijvoorbeeld zo uit zien: <br><span class="overzicht">&lt;img src="downloads/img123.jpg" alt="" width="300px"&gt;</span>
+                    <br><br><b>Afbeelding als hyperlink</b><br>Je kan zelfs een afbeelding een hyperlink maken. Als je op de afbeelding klikt, wordt je omgeleidt naar een andere pagina. Dat doe je simpelweg door als tekst van je hyperlink, het stuk tussen de <span class="tagintekst">&lt;a&gt;-tags</span>, de <span class="tagintekst">&lt;img&gt;-tag</span>te zetten, waardoor de link-tekst een plaatje wordt.</p>
+                    
+                    <br><h3 id="lijsten">Lijsten</h3><p>Er zijn enkele soorten lijsten. Disc lijsten, nummerlijsten en letterlijsten. De standaard opmaak bestaat uit 2 onderdelen. Deze staan in een lijst hieronder.<br><ul><li>Het <span class="overzicht">&lt;ul&gt;</span>-element om een disc lijst aan te maken </li><li>Het <span class="overzicht">&lt;li&gt;</span>-element. Deze komt tussen het <span class="tagintekst">&lt;ul&gt;</span>-element en hiertussen komt de tekst van elk punt te staan. Een nieuwe punt moet tussen een nieuw <br><span class="tagintekst">&lt;li&gt;</span>-element. Dit geldt voor elk soort lijst.</li><li>Het <span class="overzicht">&lt;ol&gt;</span>-element voor letter- en nummerlijsten. Een <span class="tagintekst">&lt;ol&gt;</span>-element wordt standaard een nummerlijst. Met <span class="tagintekst">&lt;ol type="A"&gt;</span> maak je een letterlijst.</li></ul>
+                    <b>Lijsten in lijsten</b><br>In de inhoud van deze pagina staat er een lijst in een lijst. Dat doe je door tussen het <span class="tagintekst">&lt;li&gt;</span>-element een nieuwe lijst te openen met <span class="tagintekst">&lt;ul&gt;</span> of <span class="tagintekst">&lt;ol&gt;</span> en daartussen dan weer nieuwe <span class="tagintekst">&lt;li&gt;</span>-elementen. Zie de afbeelding hieronder:<br><br>
+                    </p><img src="Mooie uitlegsite foto's/dubbelelijst.png" alt="afbeelding" width="500px">
+
+                    <h3 id="tabellen">Tabellen</h3>
+                    <p>Tabellen hebben 3 tags: <span class="tagintekst">&lt;table&gt;</span>, <span class="tagintekst">&lt;tr&gt;</span> en <span class="tagintekst">&lt;td&gt;</span>. Tabellen maak je dan ook in 3 stappen.
+                        <ol>
+                            <li>Begin met het <span class="tagintekst">&lt;table&gt;</span>-element. Hiermee open je een tabel. Geef deze in de begintag een border, anders zie je de rand niet.</li>
+                            <li>Vervolg met het <span class="tagintekst">&lt;tr&gt;</span>-element. Hiermee maak je een rij aan in de tabel.</li>
+                            <li>Binnen die rij komt het <span class="tagintekst">&lt;td&gt;</span>-element. Hiermee maak je een cel in de rij.</li>
+                        </ol>
+                    <br><b>Tabellen samenvoegen</b><br>Je kan in een tabel cellen samenvoegen. Voor samengevoegde cellen in een rij gebruik je niet gewoon <span class="tagintekst">&lt;td&gt;</span>, maar <span class="tagintekst">&lt;td colspan="2"&gt;</span>. Hiermee voeg je 2 cellen uit 2 kolommen samen tot 1. De 2 in de tag geeft aan hoeveel cellen er samengevoegd moeten worden. <br><br>Dan heb je nog <span class="tagintekst">&lt;td rowspan="2"&gt;</span>. Dit is om rijen samen te voegen. Dus nu worden 2 cellen boven elkaar 1. Let op, deze komt ook binnen de <span class="tagintekst">&lt;td&gt;</span>-tag.
+                    <br><br><b>Tabellen opmaken</b><br>Je kan tabellen al een soort van opmaken in je HTML-code. Hieronder staan ze in een tabel:
+                    <table border="1px soldid black">
+                        <thead>
+                            <th>Element</th><th>Betekenis</th>
+                        </thead>
+                        <td><span class="overzicht">&lt;thead&gt;</span></td><td>Voor een bovenste rij. Deze wordt bij bijvoorbeeld uitprinten op elke pagina opnieuw getoont. Deze doe je in plaats van een <span class="tagintekst">&lt;tr&gt;</span></td>
+                        <tr><td><span class="overzicht">&lt;th&gt;</span></td><td>Voor een kopje binnen een <span class="tagintekst">&lt;thead&gt;</span>-element in plaats van een <span class="tagintekst">&lt;td&gt;</span>-tag</td></tr>
+                        <tr><td><span class="overzicht">&lt;tbody&gt;</span></td><td>Voor de inhoud van de tabel</td></tr>
+                        <tr><td><span class="overzicht">&lt;tfoot&gt;</span></td><td>Voor de onderste, samenvattende rij van de tabel. Ook deze herhaalt zich bij printen op iedere pagina.</td></tr>
+                    </table>
+                    </p>
+                </div>
+
+
+                <div class="article" id="articleblokken">
+                    <br><br><h2 id="blokken">Blokken</h2>
+                    <h3 id="simpeleblokkenstructuur">Simpele blokkenstructuur</h3>
+                    <p>Het blokken gedeelte is vrij uitebreid en niet heel makkelijk. Laten we beginnen met standaard blokken. 
+                    <br>Een simpele blokken opmaak kan je grotendeels al doen in de HMTL-code. Een simpele web-pagina bestaat meestal uit een bovenste balk met het logo en titel. Verder vaak een inhoud, een stuk met tekst en plaatjes en een onderste balk met contactinfo. Voor al deze onderdelen heb je een HMTL-tag. Hieronder heb je een overzicht.</p>
+                    <ul>
+                        <li><span class="overzicht">&lt;header&gt;</span> voor de bovenste balk met naam, logo, etc. </li>
+                        <li><span class="overzicht">&lt;nav&gt;</span> voor de weergave van de inhoud of een menu</li>
+                        <li><span class="overzicht">&lt;footer&gt;</span> voor de onderste strook met bijvoorbeeld contactinfo.</li>
+                        <li><span class="overzicht">&lt;main&gt;</span> voor het stuk met plaatjes, tekst etc. (Tussen <b>&lt;header&gt;</b> en <b>&lt;footer&gt;</b>) Let op: een <span class="tagintekst">&lt;article&gt;</span> of een <span class="tagintekst">&lt;div&gt;</span> binnen een <span class="tagintekst">&lt;main&gt;</span> kan niet gepositioneerd worden. Dus je kan je <span class="tagintekst">&lt;article&gt;</span> binnne je <span class="tagintekst">&lt;main&gt;</span> niet van rij of kolom verplaatsen. (Kolommen en rijen volgen nog)</li>
+                        <li><span class="overzicht">&lt;article&gt;</span> voor tekststukken.</li>
+                        <li><span class="overzicht">&lt;aside&gt;</span> voor een (tekst)stuk naast een hoofd-tekststuk.</li>
+                    </ul>        
+                    
+                    <p><br><b>Div-element</b><br>Natuurlijk heb je ook blokken zonder een vaste naam. Deze duit je aan met een <span class="overzicht">&lt;div&gt;-tag</span>. Bij zo'n tag kun je een 'class' opgeven waarmee je het in CSS kunt opmaken. Je kan het 'class'-stukje elke naam geven, maar een steekwoord is het handigst. De hele <span class="tagintekst">&lt;div&gt;</span>-tag ziet er dan zo uit:   <span class="overzicht">&lt;div class="plaatje"&gt; &lt;/div&gt;</span>.
+                    <br>Een heel stukje dat onder een tag valt kan je in CSS opmaken door die tag zonder pijltjes in CSS te zetten en de info tussen accolades te zeten. Dus als je elk variabel blok met <span class="tagintekst">&lt;div&gt;</span> dezelfde opmaak wilt geven, dan zet je in je CSS-code: <span class="cssvoorbeeld">div {...}</span>
+                    <br>Maar het kan ook specifieker, want je kan het 'class'-stukje ook in CSS opmaken door het gedeelte tussen de dubbele hoge komma's in CSS te zetten met een punt(.) ervoor. Dus in dit geval <span class="cssvoorbeeld">.plaatje {...}</span>
+                    <br><br><b>Margin, padding en Border</b><br>Een blok bestaat natuurlijk uit de inhoud, maar ook uit een rand, een ruimte tussen de inhoud en de rand, en de ruimte om het blok heen. De rand om het blok heen noem je de <span class="overzicht">margin</span>. De ruimte tussen de rand en de inhoud heet de <span class="overzicht">padding</span>. En tot slot de rand zelf. Dat is de <span class="overzicht">border</span>. Zie het plaatje hieronder:</p>
+                <div class="image"><img src="Mooie uitlegsite foto's/Margin,padding,border.png" alt="Margin, padding en border" width="350px" class="articleimg"></div>
+                    <p><br>Als je een blok gaat opmaken in CSS komen deze 3 onderdelen tussen de accolades. Dus als je bijvoorbeeld je <span class="tagintekst">&lt;article&gt;</span>-blok een randje wilt geven, maar de rand is te dichtbij de tekst en je voegt padding toe, dan ziet dat er in CSS zo uit: 
+                    <span class="cssvoorbeeld">article {color:black; border:2px black solid; padding:10px;}</span>
+                    <br>Waarbij de rand in dit geval nog extra is opgemaakt met een zwarte kleur en een een doorgetrokken lijn.
+                    <br>Als je 1 waarde achter de margin of padding zet, dat geldt deze voor alle kanten. Maar als je 2 waardes neerzet, zoals <span class="cssvoorbeeldintext">{margin:20px 10px;}</span> dan geldt het eerste getal voor onder en boven, en het tweede getal voor links en rechts. Bij 3 getallen werkt het niet en worden alleen de eerste 2 meegerekend. Bij 4 getallen geldt de eerste voor boven, de tweede voor rechts, de derde voor onder en de laatste voor links. Met de klok mee dus. Maar wat als je nou bijvoorbeeld alleen de top en rechts wilt aanpassen. Hoe moet dat dan? Daar heb je speciale regels voor: <span class="cssvoorbeeldintext">{margin-top}</span> of <span class="cssvoorbeeldintext">{padding-right}</span>. </p>
+                    <br><br><h3 id="blokkenpositie">Positie van blokken</h3>
+                    <p><b>Het grid-element</b><br>Nou gaat het wat ingewikkelder worden. In HTML-code worden blokken automatisch onder elkaar gezet, maar soms wil je ze ook naast elkaar. Daarvoor is er een soort rooster. Deze start je in HTML met de <br><span class="overzicht">&lt;div class="grid"&gt;</span>-tag. Daar binnen maak je de blokken. Dit doe je ook met een <span class="tagintekst">&lt;div&gt;</span>-tag, met als class bijvoorbeeld "blok1" of "blok2". Vervolgens moet je in de CSS-code bij het <span class="cssvoorbeeld">.grid</span> stukje nog iets toevoegen. Om het echt een rooster te maken voeg je tussen de accolades nog <span class="cssvoorbeeldintext">display:grid;</span> toe en ook nog uit hoeveel kolommen het rooster bestaan met: <span class="cssvoorbeeldintext">grid-template-columns: 1fr 2fr 1fr</span>. Hierin staan 3 fr-stukjes, wat aanduidt dat er 3 kolommen zijn. Doordat er bij het middelste fr-stukje een 2 staat in plaats van een 1 wordt die kolom 2 keer zo breed als de andere 2. Dus als er zou staan <span class="cssvoorbeeldintext">2fr 1fr 2fr;</span> , dan zouden de 2 buitenste kolommen van de 3 dubbel zo groot zijn als de middelste. Als dit al moeilijk was kan je beter hier even mee oefenen, want het wordt nog moeilijker.<br><br><b>Het rooster</b><br>Als je een rooster maakt, dan maak je eigenlijk de blokken in rijen en kolommen. Maar de computer maakt de rasterlijnen. 3 kolommen bestaan uit 4 rasterlijnen. Zie de afbeelding hieronder:</p>
+                </p><div class="image"><img src="Mooie uitlegsite foto's/Rasterlijnen.png" alt="rasterlijnen" width="400px"></div>
+                    <p><br>Hierdoor kan je alle blokken hun eigen grootte gaan geven. Je hebt in het <br><span class="tagintekst">&lt;div class="..."&gt;</span>-stukje blokken een naam gegeven. Nu kan in de CSS-file aangeven onder het stukje van dat blok, op welke kolomlijn en rijlijn deze moet beginnen en eindigen. Bijvoorbeeld: <br><span class="cssvoorbeeld">.blok1  {grid-column-start: 1;  grid-column-end: 3; grid-row-start: 1;  grid-row-end: 2;}</span>
+                    <br>Hier start de kolom dus bij kolomrij 1 en eindigt bij 3. Dus in dit geval zijn blok 1 en 2 uit het voorbeeld nu 1 groot blok. Ook staat er dat hij begint bij rijlijn 1 en eindigt bij rijlijn 2, dus gewoon normaal. Maar je zou ook het blok kunnen laten eindigen op rijlijn 3. Dan krijg je dat blok 1, 2, 4 en 5 één groot blok worden. Dit alles kan je simpeler opschrijven. Als een kolom start bij lijn 2 en eindigt bij rij 3 dan schrijf je gewoon <span class="cssvoorbeeldintext">{grid-column: 2}</span>. En stel nou dat hij start bij lijn 2 en eindigt op rij 5 dan kan je dat ook zo opschrijven: <span class="cssvoorbeeldintext">{grid-column: 2 / 5}</span>. Dit geldt uiteraard ook voor de rijen. Op <a href="https://cssgridgarden.com/" target="_blank" class="link">deze pagina</a> kan je hier mee oefenen.<br>
+                    <br>Net als bij de kolommen kan je de hoogte van elke rij aanpassen. Dit hoeft niet, want meestal gaat dit automatisch op basis van de inhoud van het blok, maar als je dat toch wilt, dan kan dat alleen maar met een grootte zoals pixels(px). De regel ziet er dan zo uit: <br><span class="cssvoorbeeldintext">{grid-auto-rows: ...px;}</span>. Dan worden alle rijen even groot. Uiteraard blijft de <span class="cssvoorbeeldintext">grid-row-start</span> en de <span class="cssvoorbeeldintext">grid-row-stop</span> zoals je ze hebt ingesteld.
+                    <br>Blokken staan automatisch tegen elkaar aan. Dat kan je oplossen door bij elk blok een margin toe te gaan voegen, maar het kan ook makkelijker. Dit doe je met <span class="cssvoorbeeld">{column-gap: ...px;}</span> of <span class="cssvoorbeeld">{row-gap: ...px;}</span>. Maar je kan ook dit korter opschrijven. Als beide ruimtes hetzelfde moeten zijn, dan doe je dat met <span class="cssvoorbeeldintext">{gap: ...px}</span>. En stel dat je 2 verschillende waardes wilt hebben dan kan je ook de waardes achter elkaar zetten met de kolom-tussenruimte als eerste. Zo dus: <span class="cssvoorbeeldintext">{gap: 10px 15px;}</span>.</p>
+                </div>
+
+                <div class="article">
+                    <h2 id="extra">Extra</h2>
+
+                    <p>Id's en Hyperlinks voor andere plek op pagina. in Css scroll-behavior:smooth; zodat hij smooth scrollt. Scroll-margin:; voor de ruimte boven het aangeklikte element zodat hij niet automatisch helemaal bovenaan de pagina staat, maar bijv in het midden.
+                    <br>@keyframes voor animaties zonder JavaScript. @keyframe <i>naam van animatie</i>{0% {voor start animatie}  100% {voor eind animatie} } <!-- 2x accolades-->
+                    <br>box-shadow: ...px color
+                    <br>flex onderdeel. Een soort blokkenstructuur voor binnen een tag. Om uit te lijnen, te verplaatsen, te rangschikken etc.</p>
+                </div>
+            <footer>footer</footer>
+        </div>
+    </body>
+</html>
