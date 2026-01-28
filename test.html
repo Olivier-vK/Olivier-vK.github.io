@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="">
+    <title>Mijn uitlegsite</title>
+</head>
+
+<body>
+    <h1>HTML</h1><br>
+    <h2>Hoofdstuk 1 - Wat is HTML?</h2>
+    <p>HTML staat voor HyperText Markup Language. Dat klinkt ingewikkeld, maar het idee is simpel:
+    <br>HTML beschrijft wat iets is op een webpagina. Bijvoorbeeld:
+    <ul>
+        <li>dat is een titel</li>
+        <li>dat is een paragraaf</li>
+        <li>dat is een afbeelding</li>
+        <li>dat is een menu</li>
+    </ul>
+    HTML zegt niet hoe iets eruitziet. Dat doet CSS. En HTML zegt ook niet wat iets doet. Dat doet JavaScript.
+    </p>
+    
+    <h2>Hoofdstuk 2 - Wat zijn HTML-elementen?</h2>
+    <p>HTML bestaat uit elementen. Een element ziet er meestal zo uit:<br>&lt;p&gt;Dit is een tekst&lt;/p&gt;
+    <br>Dit bestaat uit:
+    <ul>
+        <li>een openingstag ( '&lt;p&gt;')</li>
+        <li>de inhoud ('Dit is een tekst')</li>
+        <li>een sluitingstag ( '&lt;/p&gt;' )</li>
+    </ul>
+    Samen noemen we dit een HTML-element.</p>
+
+    <h2>Hoofdstuk 3 - De basis van ELKE HTML-pagina</h2>
+
+Elke HTML-pagina begint met dezelfde structuur.
+
+```html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="nl"&gt;
+&gt;head&lt;
+  <meta charset="UTF-8">
+  <title>Mijn eerste website</title>
+</head>
+<body>
+  Hier komt alles wat zichtbaar is
+</body>
+</html>
+```
+
+Laten we dit stap voor stap bekijken.
+
+---
+
+## Hoofdstuk 5 – `<!DOCTYPE html>`
+
+Dit is het allereerste wat in je bestand staat.
+
+Het vertelt de browser:
+
+> “Dit document gebruikt de moderne HTML-standaard.”
+
+Je hoeft hier nooit iets aan te veranderen.
+👉 Zet dit **altijd bovenaan**.
+
+---
+
+## Hoofdstuk 6 – Het `<html>` element
+
+```html
+<html lang="nl">
+```
+
+Dit element bevat **de hele pagina**.
+
+Het attribuut `lang="nl"` betekent dat de pagina Nederlands is.
+Dit is belangrijk voor:
+
+* schermlezers
+* zoekmachines
+
+---
+
+## Hoofdstuk 7 – Het `<head>` gedeelte
+
+Alles in `<head>` zie je **niet** op de pagina.
+
+Hier staat informatie **over** de pagina.
+
+### `<meta charset="UTF-8">`
+
+Zorgt ervoor dat letters en tekens goed worden weergegeven.
+
+### `<title>`
+
+De titel van het tabblad en van zoekmachines.
+
+Elke pagina moet een eigen titel hebben.
+
+---
+
+## Hoofdstuk 8 – Het `<body>` gedeelte
+
+Alles wat de bezoeker ziet, staat in `<body>`.
+
+Tekst, afbeeldingen, menu’s, knoppen — alles.
+
+---
+
+## Hoofdstuk 9 – Koppen en structuur
+
+Koppen zijn één van de **belangrijkste onderdelen** van HTML. Ze geven betekenis en structuur aan je pagina.
+
+HTML heeft **zes niveaus koppen**:
+
+```html
+<h1>Hoofdtitel</h1>
+<h2>Subtitel</h2>
+<h3>Kleinere subtitel</h3>
+<h4>Nog kleiner</h4>
+<h5>Bijna kleinste</h5>
+<h6>Kleinste kop</h6>
+```
+
+### Hoe moet je koppen gebruiken?
+
+Denk aan een boek:
+
+* `<h1>` = titel van het boek
+* `<h2>` = hoofdstukken
+* `<h3>` = paragrafen binnen een hoofdstuk
+
+Belangrijke regels:
+
+* Gebruik **maar één `<h1>` per pagina**
+* Sla geen niveaus over (dus geen `<h3>` direct na `<h1>`)
+* Gebruik koppen **niet om tekst groter te maken**
+
+Waarom is dit zo belangrijk?
+
+* Zoekmachines begrijpen je pagina beter
+* Schermlezers kunnen navigeren
+* Je pagina wordt overzichtelijker
+
+---
+
+## Hoofdstuk 10 – Tekst en paragrafen
+
+Vrijwel alle inhoud op een website bestaat uit tekst. HTML heeft daar duidelijke elementen voor.
+
+### Paragrafen (`<p>`)
+
+Een paragraaf is een blok tekst dat bij elkaar hoort.
+
+```html
+<p>Dit is een paragraaf tekst.</p>
+```
+
+Elke nieuwe alinea hoort in een **nieuwe `<p>`**.
+
+Gebruik geen `<br>` om paragrafen te maken — dat is een veelgemaakte fout.
+
+### Tekst met betekenis
+
+HTML heeft elementen om **betekenis** te geven aan tekst:
+
+```html
+<strong>Dit is belangrijk</strong>
+<em>Dit krijgt nadruk</em>
+```
+
+* `<strong>` = belangrijk, serieus
+* `<em>` = nadruk, intonatie
+
+Browsers tonen dit vaak vet of schuin, maar de **betekenis** is het belangrijkste.
+
+---
+
+## Hoofdstuk 11 – Links
+
+Zonder links zou het internet niet bestaan. Links verbinden pagina’s met elkaar.
+
+### Basis link
+
+```html
+<a href="pagina.html">Klik hier</a>
+```
+
+* `<a>` staat voor *anchor*
+* `href` betekent: waar ga je naartoe?
+
+### Interne links
+
+Je kunt ook linken naar een plek op dezelfde pagina:
+
+```html
+<a href="#contact">Ga naar contact</a>
+```
+
+Dit werkt samen met een `id`:
+
+```html
+<section id="contact">
+```
+
+### Externe links
+
+```html
+<a href="https://example.com" target="_blank">Externe site</a>
+```
+
+`target="_blank"` opent de link in een nieuw tabblad.
+
+---
+
+## Hoofdstuk 12 – Afbeeldingen
+
+Afbeeldingen maken een website visueel aantrekkelijk, maar moeten correct gebruikt worden.
+
+```html
+<img src="foto.jpg" alt="Beschrijving van de afbeelding">
+```
+
+### Wat betekenen deze onderdelen?
+
+* `src` = het afbeeldingsbestand
+* `alt` = tekst die beschrijft wat er te zien is
+
+Waarom is `alt` zo belangrijk?
+
+* Schermlezers lezen deze tekst voor
+* Het verschijnt als de afbeelding niet laadt
+* Zoekmachines gebruiken het
+
+Gebruik **alt-tekst die beschrijft wat er te zien is**, niet wat je voelt.
+
+---
+
+## Hoofdstuk 13 – Lijsten
+
+```html
+<ul>
+  <li>Item</li>
+</ul>
+```
+
+Of genummerd:
+
+```html
+<ol>
+  <li>Eerste</li>
+</ol>
+```
+
+---
+
+## Hoofdstuk 14 – Structuur met containers
+
+### `<div>`
+
+Een blok dat wordt gebruikt om onderdelen te groeperen.
+
+### `<span>`
+
+Een klein stukje tekst binnen een zin.
+
+---
+
+## Hoofdstuk 15 – Semantische HTML (heel belangrijk)
+
+Semantische HTML betekent: HTML gebruiken dat **beschrijft wat iets is**.
+
+In plaats van alles in `<div>` te stoppen, gebruik je elementen met betekenis:
+
+```html
+<header>
+<nav>
+<main>
+<section>
+<article>
+<footer>
+```
+
+### Wat betekenen ze?
+
+* `<header>` – bovenkant van een pagina of sectie
+* `<nav>` – navigatie
+* `<main>` – hoofdinhoud (maar één per pagina)
+* `<section>` – logisch hoofdstuk
+* `<article>` – zelfstandig stuk content
+* `<footer>` – onderkant
+
+Waarom is dit belangrijk?
+
+* Toegankelijkheid
+* SEO
+* Begrijpelijke code
+
+Semantische HTML maakt je website toekomstbestendig.
+
+---
+
+## Hoofdstuk 16 – Media: audio en video
+
+```html
+<audio controls>
+  <source src="geluid.mp3">
+</audio>
+```
+
+```html
+<video controls>
+  <source src="video.mp4">
+</video>
+```
+
+---
+
+## Hoofdstuk 17 – Formulieren (introductie)
+
+```html
+<form>
+  <label>Naam</label>
+  <input type="text">
+  <button>Versturen</button>
+</form>
+```
+
+Formulieren verzamelen informatie van gebruikers.
+
+---
+
+## Hoofdstuk 18 – Openklapbare inhoud
+
+```html
+<details>
+  <summary>Klik hier</summary>
+  <p>Verborgen inhoud</p>
+</details>
+```
+
+Dit element zorgt voor **inhoud die je kunt open- en dichtklappen**, zonder JavaScript.
+
+### Hoe werkt dit?
+
+* `<summary>` is het deel waar je op klikt
+* Alles daaronder wordt verborgen totdat je klikt
+
+Dit is ideaal voor:
+
+* veelgestelde vragen (FAQ)
+* inhoudsopgaven
+* extra uitleg
+
+De browser regelt alles automatisch.
+
+---
+
+## Hoofdstuk 19 – Tabellen (gegevens overzichtelijk tonen)
+
+Tabellen gebruik je om **gegevens in rijen en kolommen** te tonen.
+
+Denk aan:
+
+* prijzen
+* schema’s
+* vergelijkingen
+
+### Basisstructuur van een tabel
+
+```html
+<table>
+  <tr>
+    <th>Naam</th>
+    <th>Leeftijd</th>
+  </tr>
+  <tr>
+    <td>Jan</td>
+    <td>25</td>
+  </tr>
+</table>
+```
+
+### Wat betekenen deze elementen?
+
+* `<table>` – de hele tabel
+* `<tr>` – een rij (table row)
+* `<th>` – een kolomkop (table header)
+* `<td>` – een cel met gegevens (table data)
+
+### Belangrijke tips
+
+* Gebruik tabellen **alleen voor data**, niet voor layout
+* Gebruik `<th>` voor koppen, dat helpt schermlezers
+
+---
+
+## Hoofdstuk 20 – Knoppen (`<button>`)
+
+Knoppen zijn interactieve elementen.
+
+```html
+<button>Klik mij</button>
+```
+
+### Wanneer gebruik je een button?
+
+* om een formulier te versturen
+* om iets te activeren (met JavaScript)
+
+### Button in een formulier
+
+```html
+<form>
+  <button type="submit">Versturen</button>
+</form>
+```
+
+### Button vs link
+
+* `<a>` → navigatie (naar een andere pagina)
+* `<button>` → actie uitvoeren
+
+Gebruik dus geen knop om te navigeren.
+
+---
+
+## Hoofdstuk 19 – Klassen en ID’s
+
+```html
+<div class="menu" id="hoofdnavigatie"></div>
+```
+
+* `class` gebruik je meerdere keren
+* `id` gebruik je één keer
+
+---
+
+## Hoofdstuk 20 – Commentaar
+
+```html
+<!-- Dit is een comment -->
+```
+
+Wordt niet weergegeven in de browser.
+
+---
+
+## Hoofdstuk 21 – Wat HTML wel en niet doet
+
+HTML:
+
+* beschrijft structuur
+* geeft betekenis
+
+HTML doet **geen**:
+
+* styling
+* interactie
+</body>
+</html>
