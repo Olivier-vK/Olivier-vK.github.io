@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML en CSS</title>
+        <link rel="stylesheet" href="homemadesite.css">
+    </head>
+
+    <body>
+        <div class="container">
+            
+            <header><h><a href="index.html" class="kop">HTML en CSS</a> </h></header>
+
+                <div class="nav">
+                    <ol>
+                        <li><b><a href="html.html" class="paginalink">HTML</a></b></li>
+
+                        <li><b><a href="css.html" class="paginalink">CSS</a></b></li>
+
+                        <li><b><a href="blokken.html" class="paginalink">Blokken</a></b>
+                            <ul>
+                                <li><a href="#simpeleblokkenstructuur" class="paginalink">Simpele blokkenstructuur</a></li>
+                                <li><a href="#blokkenpositie" class="paginalink">Positie van blokken</a> </li>
+                                <li><a href="#flexboxlayout" class="paginalink">Flexbox layout</a> </li>
+                            </ul>
+                        </li>
+
+                        <li><b><a href="extra.html" class="paginalink">Extra</a></b></li>
+                    </ol>
+                </div>
+
+                <div class="article">
+                    <h2 id="blokken">Blokken</h2>
+                    <h3 id="simpeleblokkenstructuur">Simpele blokkenstructuur</h3>
+                    <p>Het blokken gedeelte is vrij uitebreid en niet heel makkelijk. Laten we beginnen met standaard blokken. 
+                    <br>Een simpele blokken opmaak kan je grotendeels al doen in de HMTL-code. Een simpele web-pagina bestaat meestal uit een bovenste balk met het logo en titel. Verder vaak een inhoud, een stuk met tekst en plaatjes en een onderste balk met contactinfo. Voor al deze onderdelen heb je een HMTL-tag. Hieronder heb je een overzicht.</p>
+                    <ul>
+                        <li><span class="overzicht">&lt;header&gt;</span> voor de bovenste balk met naam, logo, etc. </li>
+                        <li><span class="overzicht">&lt;nav&gt;</span> voor de weergave van de inhoud of een menu</li>
+                        <li><span class="overzicht">&lt;footer&gt;</span> voor de onderste strook met bijvoorbeeld contactinfo.</li>
+                        <li><span class="overzicht">&lt;main&gt;</span> voor het stuk met plaatjes, tekst etc. (Tussen <b>&lt;header&gt;</b> en <b>&lt;footer&gt;</b>) *</li>
+                        <li><span class="overzicht">&lt;article&gt;</span> voor tekststukken.</li>
+                        <li><span class="overzicht">&lt;aside&gt;</span> voor een (tekst)stuk naast een hoofd-tekststuk.</li>
+                    </ul>        
+                    <p><span class="sterretje">*Let op: een <span class="tagintekst">&lt;article&gt;</span> of een <span class="tagintekst">&lt;div&gt;</span> binnen een <span class="tagintekst">&lt;main&gt;</span> kan niet gepositioneerd worden. Dus je kan je <span class="tagintekst">&lt;article&gt;</span> binnen je <span class="tagintekst">&lt;main&gt;</span> niet van rij of kolom verplaatsen. Alleen de <span class="tagintekst">&lt;main&gt;</span> zelf kan gepositioneerd worden. Je kan ook gewoon de <span class="tagintekst">&lt;main&gt;</span> weglaten en alleen een <span class="tagintekst">&lt;artice&gt;</span> of <span class="tagintekst">&lt;div&gt;</span> neerzetten. (positioneren in rijen en kolommen volgt nog)</span></p>
+                    <p><br><b>Div-element</b><br>Natuurlijk heb je ook blokken zonder een vaste naam. Deze duit je aan met een <span class="overzicht">&lt;div&gt;-tag</span>. Bij zo'n tag kun je een 'class' opgeven waarmee je het in CSS kunt opmaken. Je kan het 'class'-stukje elke naam geven, maar een steekwoord is het handigst. De hele <span class="tagintekst">&lt;div&gt;</span>-tag ziet er dan zo uit:   <span class="overzicht">&lt;div class="plaatje"&gt; &lt;/div&gt;</span>.
+                    <br>Een heel stukje dat onder een tag valt kan je in CSS opmaken door die tag zonder pijltjes in CSS te zetten en de info tussen accolades te zeten. Dus als je elk variabel blok met <span class="tagintekst">&lt;div&gt;</span> dezelfde opmaak wilt geven, dan zet je in je CSS-code: <span class="cssvoorbeeld">div {...}</span>
+                    <br>Maar het kan ook specifieker, want je kan het 'class'-stukje ook in CSS opmaken door het gedeelte tussen de dubbele hoge komma's in CSS te zetten met een punt(.) ervoor. Dus in dit geval <span class="cssvoorbeeld">.plaatje {...}</span>
+                    <br><br><b>Margin, padding en Border</b><br>Een blok bestaat natuurlijk uit de inhoud, maar ook uit een rand, een ruimte tussen de inhoud en de rand, en de ruimte om het blok heen. De rand om het blok heen noem je de <span class="overzicht">margin</span>. De ruimte tussen de rand en de inhoud heet de <span class="overzicht">padding</span>. En tot slot de rand zelf. Dat is de <span class="overzicht">border</span>. Zie het plaatje hieronder:</p>
+                <div class="image"><img src="Mooie uitlegsite foto's/Margin,padding,border.png" alt="Margin, padding en border" width="350px" class="articleimg"></div>
+                    <p><br>Als je een blok gaat opmaken in CSS komen deze 3 onderdelen tussen de accolades. Dus als je bijvoorbeeld je <span class="tagintekst">&lt;article&gt;</span>-blok een randje wilt geven, maar de rand is te dichtbij de tekst en je voegt padding toe, dan ziet dat er in CSS zo uit: 
+                    <span class="cssvoorbeeld">article {color:black; border:2px black solid; padding:10px;}</span>
+                    <br>Waarbij de rand in dit geval nog extra is opgemaakt met een zwarte kleur en een een doorgetrokken lijn.
+                    <br>Als je 1 waarde achter de margin of padding zet, dat geldt deze voor alle kanten. Maar als je 2 waardes neerzet, zoals <span class="cssvoorbeeldintext">{margin:20px 10px;}</span> dan geldt het eerste getal voor onder en boven, en het tweede getal voor links en rechts. Bij 3 getallen werkt het niet en worden alleen de eerste 2 meegerekend. Bij 4 getallen geldt de eerste voor boven, de tweede voor rechts, de derde voor onder en de laatste voor links. Met de klok mee dus. Maar wat als je nou bijvoorbeeld alleen de top en rechts wilt aanpassen. Hoe moet dat dan? Daar heb je speciale regels voor: <span class="cssvoorbeeldintext">{margin-top}</span> of <span class="cssvoorbeeldintext">{padding-right}</span>. </p>
+                    
+                    <br><br><h3 id="blokkenpositie">Positie van blokken</h3>
+                    <p><b>Het grid-element</b><br>Nou gaat het wat ingewikkelder worden. In HTML-code worden blokken automatisch onder elkaar gezet, maar soms wil je ze ook naast elkaar. Daarvoor is er een soort rooster. Deze start je in HTML met de <br><span class="overzicht">&lt;div class="grid"&gt;</span>-tag. Daar binnen maak je de blokken. Dit doe je ook met een <span class="tagintekst">&lt;div&gt;</span>-tag, met als class bijvoorbeeld "blok1" of "blok2". Vervolgens moet je in de CSS-code bij het <span class="cssvoorbeeld">.grid</span> stukje nog iets toevoegen. Om het echt een rooster te maken voeg je tussen de accolades nog <span class="cssvoorbeeldintext">display:grid;</span> toe en ook nog uit hoeveel kolommen het rooster bestaan met: <span class="cssvoorbeeldintext">grid-template-columns: 1fr 2fr 1fr</span>. Hierin staan 3 fr-stukjes, wat aanduidt dat er 3 kolommen zijn. Doordat er bij het middelste fr-stukje een 2 staat in plaats van een 1 wordt die kolom 2 keer zo breed als de andere 2. Dus als er zou staan <span class="cssvoorbeeldintext">2fr 1fr 2fr;</span> , dan zouden de 2 buitenste kolommen van de 3 dubbel zo groot zijn als de middelste. Als dit al moeilijk was kan je beter hier even mee oefenen, want het wordt nog moeilijker.<br><br><b>Het rooster</b><br>Als je een rooster maakt, dan maak je eigenlijk de blokken in rijen en kolommen. Maar de computer maakt de rasterlijnen. 3 kolommen bestaan uit 4 rasterlijnen. Zie de afbeelding hieronder:</p>
+                </p><div class="image"><img src="Mooie uitlegsite foto's/Rasterlijnen.png" alt="rasterlijnen" width="400px"></div>
+                    <p><br>Hierdoor kan je alle blokken hun eigen grootte gaan geven. Je hebt in het <br><span class="tagintekst">&lt;div class="..."&gt;</span>-stukje blokken een naam gegeven. Nu kan in de CSS-file aangeven onder het stukje van dat blok, op welke kolomlijn en rijlijn deze moet beginnen en eindigen. Bijvoorbeeld: <br><span class="cssvoorbeeld">.blok1  {grid-column-start: 1;  grid-column-end: 3; grid-row-start: 1;  grid-row-end: 2;}</span>
+                    <br>Hier start de kolom dus bij kolomrij 1 en eindigt bij 3. Dus in dit geval zijn blok 1 en 2 uit het voorbeeld nu 1 groot blok. Ook staat er dat hij begint bij rijlijn 1 en eindigt bij rijlijn 2, dus gewoon normaal. Maar je zou ook het blok kunnen laten eindigen op rijlijn 3. Dan krijg je dat blok 1, 2, 4 en 5 één groot blok worden. Dit alles kan je simpeler opschrijven. Als een kolom start bij lijn 2 en eindigt bij rij 3 dan schrijf je gewoon <span class="cssvoorbeeldintext">{grid-column: 2}</span>. En stel nou dat hij start bij lijn 2 en eindigt op rij 5 dan kan je dat ook zo opschrijven: <span class="cssvoorbeeldintext">{grid-column: 2 / 5}</span>. Dit geldt uiteraard ook voor de rijen. Op <a href="https://cssgridgarden.com/" target="_blank" class="link">deze pagina</a> kan je hier mee oefenen.<br>
+                    <br>Net als bij de kolommen kan je de hoogte van elke rij aanpassen. Dit hoeft niet, want meestal gaat dit automatisch op basis van de inhoud van het blok, maar als je dat toch wilt, dan kan dat alleen maar met een grootte zoals pixels(px). De regel ziet er dan zo uit: <br><span class="cssvoorbeeldintext">{grid-auto-rows: ...px;}</span>. Dan worden alle rijen even groot. Uiteraard blijft de <span class="cssvoorbeeldintext">grid-row-start</span> en de <span class="cssvoorbeeldintext">grid-row-stop</span> zoals je ze hebt ingesteld.
+                    <br>Blokken staan automatisch tegen elkaar aan. Dat kan je oplossen door bij elk blok een margin toe te gaan voegen, maar het kan ook makkelijker. Dit doe je met <span class="cssvoorbeeld">{column-gap: ...px;}</span> of <span class="cssvoorbeeld">{row-gap: ...px;}</span>. Maar je kan ook dit korter opschrijven. Als beide ruimtes hetzelfde moeten zijn, dan doe je dat met <span class="cssvoorbeeldintext">{gap: ...px}</span>. En stel dat je 2 verschillende waardes wilt hebben dan kan je ook de waardes achter elkaar zetten met de kolom-tussenruimte als eerste. Zo dus: <span class="cssvoorbeeldintext">{gap: 10px 15px;}</span>.</p>
+
+                <br><h3 id="flexboxlayout">Flexbox layout</h3>
+                <p>Eerder heb je geleerd dat je blokken binnen een blok, zoals een <i>article</i> binnen een <i>main</i>, niet kan positioneren. Maar eigenlijk kan dat wel. Namelijk met een <span class="overzicht">flexbox</span>. Dat is einglijk een soort rooster binnen een blok. Deze heeft geen eigen HTML-tag, dus moet het in een <span class="tagintekst">div</span>-element geplaatst worden. Alle inhoud van de flexbox moet binnen het <span class="tagintekst">div</span>-element. <br>Eerst zet je alle inhoud netjes naast elkaar met <span class="cssvoorbeeld">display: flex;</span>. Maar doordat de inhoud breder is dan het scherm verdwijnt er een deel naast het scherm. Dit los je op met <span class="cssvoorbeeld">flex-wrap: wrap;</span>. Deze zorgt ervoor dat de inhoud zich automatisch over meerdere rijen verdeelt als het niet past.<br>Vervolgens kan je net zoals bij een grid de ruimte tussen in de inhoud bepalen met een <span class="cssvoorbeeldintext">gap</span>.
+
+                </p>
+                </div>
+            <footer>footer</footer>
+        </div>
+    </body>
+</html>

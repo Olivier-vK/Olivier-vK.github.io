@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS</title>
+        <link rel="stylesheet" href="homemadesite.css">
+    </head>
+
+    <body>
+        <div class="container">
+            
+            <header><h><a href="index.html" class="kop">HTML en CSS</a></h></header>
+              
+            <div class="nav">
+                <ol>
+                    <li><b><a href="html.html" class="paginalink">HTML</a></b></li>
+                        
+                    <li><b><a href="css.html" class="paginalink">CSS</a></b>
+                        <ul>
+                            <li><a href="#basisopmaak" class="paginalink">Basisopmaak</a></li>
+                            <li><a href="#kleurenlettertypen" class="paginalink">Kleur en Lettertypen</a> </li>
+                            <li><a href="#hyperlinks" class="paginalink">Hyperlinks en cursor</a> </li>
+                            <li><a href="#lijstencss" class="paginalink">Lijsten</a> </li>
+                            <li><a href="#tabellencss" class="paginalink">Tabellen</a> </li>
+                        </ul>
+                    </li>
+
+                    <li><b><a href="blokken.html" class="paginalink">Blokken</a></b></li>
+
+                    <li><b><a href="extra.html" class="paginalink">Extra</a></b></li>
+                </ol>
+            </div>
+            <div class="article">
+                <h2 id="css">CSS</h2>
+                <h3 id=""></h3>
+                <p>Met CSS creëer je de opmaak van een website. Deze moet je eerst linken in de HTML-file waar je de CSS-file voor gebruikt. Dit doe je in het <span class="tagintekst">&lt;head&gt;</span>-element. Zo ziet dat eruit: <span class="tagintekst">&lt;link rel="stylesheet" href="<i>naam</i>.css"&gt;</span>. <br>Nu kan het opmaken echt beginnen.
+            </p><h3 id="basisopmaak">Basisopmaak</h3>
+                <p>In CSS gebruik je veel accolades, dubbele punten en punt-komma's. Hieronder staat een afbeelding van een standaard CSS-code:<br>
+                <br><img src="Mooie uitlegsite foto's/cssbasis.png" alt="afbeelding" width="600px"><br>Zoals je ziet begin je de code met de HTML-tag die je wilt opmaken: de selector. Daarna komen tussen de accolades de stijlregels. Deze bestaan uit de eigenschap (bijvoorbeeld kleur), een dubbele punt, dan de waarde (bijvoorbeeld rood), en dan een punt-komma. Elke stijlregel ziet er zo uit en komt tussen de accolades. Voor een nieuwe eigenschap + waarde hoef je niet een nieuwe selector aan te maken, maar kan dat gewoon tussen dezelfde accolades.<br>Als je meerdere HTML-onderdelen dezelfde eigenschappen wilt geven hoef je ook niet heel veel selectors aan te maken, maar kan je ze in 1 selector opsommen met een komma ertussen. Dat ziet er dan  bijvoorbeeld zo uit:<br><span class="cssvoorbeeldintext">h1, h2, h3 <br>{color: blue;&nbsp;&nbsp;background-color: gray;}</span>
+            </p><br><br><h3 id="kleurenlettertypen">Kleuren en Lettertypen</h3>
+                <p>
+                <b>Kleuren</b><br>Kleuren kunnen op 3 verschillende manieren.
+                <ol>
+                    <li>Kleurnaam</li>
+                    <li>RGB-waarde</li>
+                    <li>Hexadecimale kleurcode</li>
+                </ol>
+                De eerste is gewoon 'groen' of 'donkerblauw'. De tweede ken je ook wel, deze bestaat uit 3 cijfers van 0 tot 255. Deze bepalen de hoeveelheid rood, groen en blauw er gemengt worden. Bijvoorbeeld: <span class="cssvoorbeeldintext"> color: rgb (100, 233, 98);</span> <br>De laatste is een '#' met daarachter 6 karakters. Dit zijn cijfers van 0 tot 9 of letters van a tot f. Bijvoorbeeld: <span class="cssvoorbeeldintext">color: #e37b3a;</span>
+                <br><br><br><b>Achtergrondkleur</b><br>Als je een <span class="cssvoorbeeld">achtergrondkleur</span> wilt hebben, kan je dat het best in de selector <span class="cssvoorbeeldintext">body</span> doen. Want als je bijvoorbeel de selector <span class="cssvoorbeeldintext">h1</span> een achtergrondkleur geeft, dan komt de achtergrondkleur over alleen de hoogte van die tekst, maar wel over de hele breedte van de pagina.<br><br>Je kan natuurlijk ook een plaatje als afbeelding doen. Dan gebruik je de stijlregel <span class="cssvoorbeeldintext">background-image:</span>, met als waarde <span class="cssvoorbeeldintext">url (<i>bestandslocatie</i>);</span>. Met kleine afbeeldingen zal de webbrowser de afbeelding automatisch onder en naast elkaar plakken om het op te vullen. <br><br><img src="Mooie uitlegsite foto's/achtergrond.png" alt="afbeelding" width="500px">
+                <br><br><br><b>Lettertypen</b><br>De <span class="cssvoorbeeld">lettertypen</span> pas je in CSS aan met de eigenschap <span class="cssvoorbeeldintext">font-family</span>. Je kan de gehele pagina hetzelfde lettertype geven door hem in het <span class="cssvoorbeeldintext">body</span>-element te zetten, maar je kan natuurlijk ook de kopjes en/of paragraven een ander lettertype geven.<br>Het is verstandig om meer dan 1 lettertype op te geven, want niet elke webbrowser kan elk lettertype weergeven. De lettertypen <i>serif</i> en <i>sans-serif</i> kunnen door elk apparaat of webbrowser getoont worden, dus is het slim om die achteraan toe te voegen als een soort laatste optie.
+                <br><br><h3>Lettergrootte en vormgeving</h3><br><b>Lettergrootte</b><br>Bepaalde onderdelen krijgen vanzelf een bepaalde grootte, maar deze kan je ook aanpassen. Dat doe je met de eigenschap <span class="cssvoorbeeldintext">font-size</span>. Deze kan je in verschillende waardes opschrijven, zoals pt, px, % of cm. Maar ook bijvoorbeeld <span class="cssvoorbeeldintext">vw</span>, waarbij de grootte afhankelijk is van de grootte van het scherm.
+                <br><br><b>Uitlijning</b><br>Teksten worden altijd automatisch links uitgelijnd. Maar je kan het ook op andere plekken doen. De eigenschap <span class="cssvoorbeeldintext">text-align</span> kan verschillende waarden hebben. 
+                <table border="1px solid black">
+                    <thead><th>Waarde</th><th>Betekenis</th></thead>
+                    <tr><td><span class="cssvoorbeeldintext">left</span></td><td>Voor links uitlijnen(automatisch)</td></tr>
+                    <tr><td><span class="cssvoorbeeldintext">right</span></td><td>Voor rechts uitlijnen</td></tr>
+                    <tr><td><span class="cssvoorbeeldintext">center</span></td><td>Voor in het midden uitlijnen</td></tr>
+                    <tr><td><span class="cssvoorbeeldintext">justify</span></td><td>Voor gelijkmatig uitlijnen over de hele pagina</td></tr>
+                </table>
+                <br>Daarnaast kan je ook nog de ruimte tussen de regels bepalen. De <span class="cssvoorbeeldintext">line-hight</span>. Hierbij kan je gewoon een getal invullen en dan wordt de tussenruimte <i>jouw getal</i> keer de hoogte van de tekst. Maar je het ook gewoon instellen in px, % of vw etc.
+                <br><br><b>Vormgeving</b><br>In HMTL kan je een tekst al vet, schuin of onderstreept maken, en dat kan ook in CSS. Dit is handiger voor grote stukken tekst of als je elk tabelkopje vet wilt hebben.
+                <ol>
+                    <li>Vet: <span class="cssvoorbeeldintext">font-weight</span></li>
+                    <li>Schuin: <span class="cssvoorbeeldintext">font-style</span></li>
+                    <li>Onderstreept: <span class="cssvoorbeeldintext">text-decoration</span></li>
+                </ol>
+                Bij <span class="cssvoorbeeldintext">font-weight</span> kan je de waardes <i>bold</i> en <i>normal</i>invullen. Bold voor vet, normal voor als iets automatisch vet is maar je dat niet wilt zoals kopjes.<br>
+                Bij <span class="cssvoorbeeldintext">font-style</span> kan je de waardes <i>italic</i> en <i>normal</i> invullen. Deze spreken voor zich.<br>
+                En bij <span class="cssvoorbeeldintext">text-decoration</span> kan je <i>none</i> invullen voor niks, <i>underline</i> voor onderstreept, <i>overline</i> voor streep erboven en <i>line-though</i> voor streep erdoorheen.</p>
+
+                <h3 id="hyperlinks">Hyperlinks en cursor</h3>
+                <p>Hyperlinks worden automatisch blauw en onderstreept. Dat kan je natuurlijk aanpassen onder de selector <span class="cssvoorbeeldintext">a</span>. Maar op sommige webpagina's heb je dat als je met de muis over de link gaat dat ze beide veranderen. Daarvoor wordt er direct achter de selector een zogenaamde <i>pseudo class</i> geplakt. Deze bestaat uit een dubbele punt en waar het over gaat. In dit geval is dat <span class="cssvoorbeeldintext">:hover</span> met daarachter de accolades. Let op, alles tussen de accolades geldt dus alleen maar als de muis over het aangewezen HTML element gaat. Vaak geef je daar in een andere tekstkleur aan en geen onderstreping meer.<br><br>Je kan ook de muis zelf aanpassen. Op hyperlinks en tekststukken gebeurt dat eigenlijk al automatisch, maar als je nou een andere muis wilt kan dat ook. Bijvoorbeeld zo:<br><br><img src="Mooie uitlegsite foto's/cursorvoorbeeld.png" atl="afbeelding" width="550px">
+                <br><br>Hier wordt een vraagteken cursor als voorbeeld gebruikt maar er zijn er natuurlijk veel meer. Zie hieronder: <br><br><img src="Mooie uitlegsite foto's/cursors.png" alt="afbeelding" width="500px" class="imgage"><br></p>
+                <br><br><h3 id="lijstencss">Lijsten</h3>
+                <p>In het HTML-onderdeel heb je 3 soorten lijsten geleerd. Deze worden altijd automatisch opgemaakt. En <span class="tagintekst">ul</span>-lijst krijgt bijvoorbeeld altijd ingekleurde zwarte bolletjes. Maar je kan ook een vierkantje, of een niet ingekleurd bolletje. Dit geldt alleen voor het <span class="tagintekst">ul</span>-onderdeel dus de selector is dan ook gewoon <span class="cssvoorbeeldintext">ul</span>. De eigenschap is <span class="cssvoorbeeldintext">list-style-type:</span> en hieronder staan en paar mogelijke waardes: <br><br><img src="Mooie uitlegsite foto's/ulstyle.png" alt="afbeelding" width="570px">
+                <br><br>Natuurlijk kan je ook de tekstkleur, text-decoration, :hover etc. aanpassen voor het <span class="cssvoorbeeldintext">ul</span>-onderdeel aanpassen. Dit geldt ook voor het <span class="cssvoorbeeldintext">ol</span>-element. Deze heeft zijn eigen waardes voor de <i>list-style-type</i>. Die staan hieronder weergegeven:<br><br><img src="Mooie uitlegsite foto's/olstyle.png" alt="afbeelding" width="500px">
+                </p>
+                
+                <br><br><h3 id="tabellencss">Tabellen</h3>
+                <p>Tabellen hebben net zoals de meeste dingen automatisch een opmaak. Deze kan je voor een klein deel al aanpassen in je HTML-code. Maar wat je daar aangeeft geldt niet alleen voor de tabelrand, maar ook voor de celranden. Daarom krijg je zo'n dubbele rand. Als je in CSS alleen het <span class="cssvoorbeeldintext">table</span>-onderdeel een opmaak geeft kijgen de cellen geen tussenrand en als je het <span class="cssvoorbeeldintext">td</span> dan ook opmaakt krijg je weer een dubbele rand. Om dit op te lossen geef je binnen de <span class="cssvoorbeeldintext">table</span> selector de volgende eigenschap en waarde op: <span class="cssvoorbeeldintext">border-collapse: collapse;</span>
+                <br>Uiteraard kan je ook de hoogte een breedte wijzigen. Dat kan in alleen het <span class="cssvoorbeeldintext">td</span> of <span class="cssvoorbeeldintext">tr</span>-stuk maar ook voor de hele tabel.<br>Daarnaast kun je ook de <span class="cssvoorbeeldintext">&lt;thead&gt;</span>, <span class="cssvoorbeeldintext">&lt;th&gt;</span>, <span class="cssvoorbeeldintext">&lt;tbody&gt;</span> en <span class="cssvoorbeeldintext">&lt;tfoot&gt;</span>-onderdelen ook aanpassen, zodat bijvoorbeeld de bovenste balk grijs is, net als op deze pagina. Hoe dit verder moet spreekt voor zich.
+                <br>
+                </p>
+            </div>
+          
+            <footer>footer</footer>
+        </div>
+    </body>
+
+</html>

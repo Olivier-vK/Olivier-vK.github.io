@@ -1,0 +1,75 @@
+html, body
+    {background-color:rgb(238, 238, 238); overflow-x:hidden;
+    margin:0; padding:0; font-family:'Work Sans', sans-serif;
+    color:black; scroll-behavior: smooth;}
+
+.link, .link:visited  {color:deepskyblue; text-decoration: none;}
+.link:hover
+    {cursor: pointer; 
+    text-decoration: underline; 
+    color: rgb(2, 140, 186);}
+
+.paginalink, .paginalink:visited
+    {color:black; text-decoration: none;}
+.paginalink:hover
+    {text-decoration: underline; cursor: pointer;}
+
+h2, h3 
+    {scroll-margin-top:100px;}/* om te zorgen dat als je op de anchor klikt dat de gelinkte text ong in het midden komt ipv automatisch helemaal bovenaan.*/
+h3:target
+    {animation: highlightanchors 3s ease forwards;/*om te zorgen dat als je op de anchor klikt in de inhoud, deze achtergrond even grijs wordt. Forwards zorgt ervoor dat de eindstand behouden wordt.*/}
+@keyframes highlightanchors
+    {0%     {background-color: rgb(197, 197, 197);}/*voor achtergrondkleur begin animatie*/
+    100%    {background-color: transparent;}}/*voor transparant aan einde van animatie*/
+
+table 
+    {border-collapse: collapse;
+    margin:10px 5px; width:550px;}
+td  {padding:5px 10px;}
+thead
+    {background-color: rgb(231, 233, 234);}
+
+.kop {font-size:30px;font-weight: 600; text-decoration: none; color:black;}
+
+div, header, .nav, footer
+    {border: 1px solid transparent;}
+.container 
+    {display:grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto auto; 
+    column-gap:5px}
+
+header
+    {padding:8px 45px; text-align:left; grid-column:1 / 5; background-color: rgb(249, 249, 249); top:0; text-decoration: none;
+    position:fixed; z-index:100; width:100%;/*het laatste stuk om te zorgen dat de header blijft staan als je door de pagina scrollt. De z-index is om te zorgen dat deze boven alle andere dingen komt te liggen.*/
+    border: 0.3px rgb(199, 198, 198) solid; font-weight: bold;
+    box-shadow: 0px 0px 4px 0px;}
+
+.nav
+    { 
+    padding:10px; margin:80px 0px 0px 10px;
+    grid-column:1/2;
+    position:fixed;}/*om te zorgen dat de .nav niet met de pagina meescrollt.*/
+
+.article
+    {grid-column:2 / 4; padding: 5px 20px 0px 20px; margin-top:80px;
+    background-color: rgb(249,249,249); border:1px solid rgb(249,249,249);
+    }
+.overzicht, .cssvoorbeeld
+    {color:orangered;
+     font-weight: bold;}
+.tagintekst
+    {color:rgb(33, 145, 33);}
+
+.cssvoorbeeldintext
+    {color: rgb(46, 150, 206);}
+p   {line-height:20px;
+    word-spacing:2px ;}/*voor ruimte tussen de woorden*/
+.sterretje
+    {font-style: italic; font-size: smaller;}
+
+footer
+    {background-color: rgb(180, 180, 180);
+    grid-column:1 / 5;
+    grid-row-start:4; bottom: 0;}
+
